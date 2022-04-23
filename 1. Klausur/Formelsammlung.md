@@ -50,9 +50,9 @@ $$\vec{r}(R,\theta,\varphi)=\left[{\begin{array}{cc} R\cdot\sin{\theta}\cdot\cos
 Bzw. mit einer anderen Parametrisierung:
 $$\vec{r}(R,s,t)=\left[{\begin{array}{cc} R\cdot\sin{s}\cdot\cos{t} \\ R\cdot\sin{s}\cdot\sin{t} \\ R\cdot\cos{s} \\ \end{array} }\right]$$
 In Kugelkoordinaten gilt:
-$$dV=r^2\cdot\sin{\theta}$$
+$$dV=r^2\cdot\sin{\theta}\,dr\,d\theta\,d\varphi$$
 Zum Beispiel:
-$$\int_VE\,dV=\int_0^R\int_0^{2\pi}\int_0^{\pi}E\,d\theta d\varphi dr=\int_0^R\int_0^{2\pi}\int_0^{\pi}E\cdot r^2\cdot\sin{\theta}\,dr=4\pi\cdot\int_0^RE\cdot r^2\,dr$$
+$$\int_VE\,dV=\int_0^R\int_0^{2\pi}\int_0^{\pi}E\,d\theta d\varphi dr=\int_0^R\int_0^{2\pi}\int_0^{\pi}E\cdot r^2\cdot\sin{\theta}\,dr\,d\theta\,d\varphi=4\pi\cdot\int_0^RE\cdot r^2\,dr$$
 
 ---
 
@@ -69,6 +69,8 @@ $$\vec{r}(s,t)=\left[{\begin{array}{cc} s\cdot\cos{t} \\ s\cdot\sin{t} \\ \end{a
 $$\vec{r}(R,\varphi)=\left[{\begin{array}{cc} R\cdot\cos{\varphi} \\ R\cdot\sin{\varphi} \\ \end{array} }\right]$$
 Bzw. mit einer anderen Parametrisierung:
 $$\vec{r}(s,t)=\left[{\begin{array}{cc} s\cdot\cos{t} \\ s\cdot\sin{t} \\ \end{array} }\right]$$
+In Zylinderkoordinaten gilt:
+$$dV=r\,dr\,d\varphi\,dz$$
 ### Zylindersymmetrie
 An den Deckflächen eines zylindersymmetrischen Systems ist $\vec{E}\bot dA$ . Daher sind diese für den Betrag des elektrischen Feldes irrelevant. ($\vec{E}=0$)
 
@@ -155,7 +157,7 @@ $$\epsilon_{122}=0$$
 ---
 
 ## 13. Allgemeine Rechenregeln
-$$\hat{\boldsymbol{r}}=\frac{\vec{r}}{|r|}$$
+$$\hat{\boldsymbol{r}}=\vec{e}_r=\frac{\vec{r}}{|r|}$$
 
 ---
 
@@ -219,7 +221,7 @@ Dadurch folgt, dass die Multiplikation eines antisymmetrischen Vektors mit einem
 
 ---
 
-## 19. Elektrostatische Maxwell-Gleichungen
+## 19. Maxwell-Gleichungen in der Elektrostatik
 ### Erste Maxwell-Gleichung
 $$\boldsymbol{\nabla}\times\boldsymbol{E}=0$$
 ### Zweite Maxwell-Gleichung
@@ -237,9 +239,19 @@ Angewandt auf das elektrische Feld $E_i(x_m)$ entspricht der Satz von Stokes:
 $$\int_F\boldsymbol{\nabla}\times\boldsymbol{E}\,dF=\oint_{C}E\,ds$$
 Mit der Fläche $F$ aus der Skizze, kann man das Wegintegral über $C$ auf $C_1$ und $C_2$ aufteilen: (Nachdem für eine geschlossene Kurve $C_2$ gegen den Richtungssinn der Kurve $C$ laufen muss, hat das Integral ein negatives Vorzeichen.)
 $$\int_F\underbrace{\boldsymbol{\nabla}\times\boldsymbol{E}}_{=0}\,dF=\oint_{C_1}E\,ds-\oint_{C_2}E\,ds$$
-Wie bereits bei der Wirbelfreiheit des elektrischen Feldes in der Elektrostatik gezeigt, ist die Rotation von $E$ gleich $0$. (Zudem ist dieser Zusammenhang eine Maxwell-Gleichung.) Damit ergibt sich:
+Wie bereits bei der Wirbelfreiheit des elektrischen Feldes in der Elektrostatik gezeigt, ist die Rotation von $E$ gleich $0$. (Zudem ist dieser Zusammenhang eine Maxwell-Gleichung.) Das elektrische Feld ist ein **Gradientenfeld**. Damit ergibt sich:
 $$0=\oint_{C_1}E\,ds-\oint_{C_2}E\,ds$$
 Vereinfacht zeigt sich somit, dass das elektrische Potential unabhängig von der Kurve $C_n$ (also unabhängig von dem Weg) ist:
 $$-\oint_{C_1}E\,ds=-\oint_{C_2}E\,ds$$
 *Nachsatz*: Das elektrische Feld ist der negative Gradient des elektrischen Potentials. Daher gilt der Zusammenhang:
 $$V(\boldsymbol{x})=-\int_{\Gamma}E\,dl$$
+
+---
+
+## 21. Gradientenfeld
+Es gibt für ein Gradientenfeld mehrere äquivalente Definitionen:
+1. Ein Vektorfeld $\boldsymbol{F}$ heißt Gradientenfeld, wenn es ein Skalarfeld $\Phi$ gibt, sodass gilt $\boldsymbol{F}=\boldsymbol{\nabla}\Phi$.
+2. Das Kurvenintegral ist wegunabhängig: Der Wert des Kurvenintegrals entlang einer beliebigen Kurve $S$ innerhalb des Feldes ist nur von ihrem Anfangs- und Endpunkt abhängig, nicht dagegen von ihrer Länge.
+3. Kurvenintegrale über eine beliebige geschlossene Randkurve $S$ ergeben immer Null: $\oint_S\boldsymbol{F}\,dr=0$.
+
+Das elektrische Feld $E$ ist ein Gradientenfeld.
