@@ -17,7 +17,7 @@ $$\oint_S\boldsymbol{E}\cdot d\boldsymbol{A}=\frac{1}{\epsilon_0}\cdot\int_V\rho
 ## 2. Das elektrische Feld
 ### Allgemeine Zusammenhänge
 $$U=s\cdot E$$$$F=q\cdot E$$$$E=-\nabla V$$
-### Bedingungen für elektrisches Feld in Elektrostatik
+### Bedingungen für elektrisches Feld in Elektrostatik (= Maxwell-Gleichungen in Elektrostatik)
 $$\nabla\times E=0$$
 $$\nabla\cdot E=\frac{\rho}{\epsilon_0}\implies Gauss'sches\,Gesetz$$
 ### Colulomb'scher Ausdruck für $\boldsymbol{E_i(x_m)}$
@@ -51,7 +51,6 @@ Bzw. mit einer anderen Parametrisierung:
 $$\vec{r}(R,s,t)=\left[{\begin{array}{cc} R\cdot\sin{s}\cdot\cos{t} \\ R\cdot\sin{s}\cdot\sin{t} \\ R\cdot\cos{s} \\ \end{array} }\right]$$
 In Kugelkoordinaten gilt:
 $$dV=r^2\cdot\sin{\theta}$$
-# @Andi: Stimmt das?
 Zum Beispiel:
 $$\int_VE\,dV=\int_0^R\int_0^{2\pi}\int_0^{\pi}E\,d\theta d\varphi dr=\int_0^R\int_0^{2\pi}\int_0^{\pi}E\cdot r^2\cdot\sin{\theta}\,dr=4\pi\cdot\int_0^RE\cdot r^2\,dr$$
 
@@ -165,6 +164,8 @@ Die Regel von de L’Hospital erlaubt es in vielen Fällen, den Grenzwert von Fu
 
 Die Regel von de L’Hospital besagt dann, dass, _falls_ der Grenzwert $\lim_{x\rightarrow x_0}\frac{f'(x)}{g'(x)}$ existiert, dieser zugleich der Grenzwert $\lim_{x\rightarrow x_0}\frac{f(x)}{g(x)}$ sei, wobei $f'(x)$ und $g'(x)$ hier die ersten Ableitungen der Funktionen $f(x)$ und $g(x)$ sein sollen.
 
+---
+
 ## 15. Geometrische Formen
 ### Kreis
 Umfang: $2\pi\cdot r$
@@ -178,10 +179,48 @@ Volumen: $r^2\cdot\pi\cdot h$
 Oberfläche: $4\pi\cdot r^2$
 Volumen: $\frac{4}{3}\cdot\pi\cdot r^3$
 
+---
 
+## 16. Heaviside Funktion
+Die Heaviside-Funktion hat für jede beliebige negative Zahl den Wert $0$, andernfalls den Wert $1$. Die Heaviside-Funktion ist mit Ausnahme der Stelle $x=0$ überall stetig.
 
-# TODO!!!
-- Heaviside Funktion
-- Dirac Funktion
-- Wirbelfreiheit
-- Maxwell-Gleichungen
+$$\theta(x)=\begin{cases}0\quad\text{für }x<0\\1\quad\text{für }x\ge0\end{cases}$$
+
+---
+
+## 17. Dirac Funktion
+$$\delta(x)=\begin{cases}1\quad\text{für }x=0\\0\quad\text{sonst}\end{cases}$$
+
+---
+
+## 18. Wirbelfreiheit
+> Zeigen Sie die Rotationsfreiheit des elektrischen Feldes $E^{i}\left(x^{m}\right)$ unter Verwendung des Coulomb'schen Ausdrucks für $E^{i}\left(x^{m}\right)$ in Abhängigkeit von der Raumladungsdichte $\rho\left(x^{m}\right)$.
+
+Der Coulomb-Ausdruck für das elektrische Feld ist:
+$$E_i(x_m)=\frac{1}{4\pi\cdot\epsilon_0}\cdot\int_V\rho(\boldsymbol{x}_m')\cdot\frac{\boldsymbol{x}_i-\boldsymbol{x}_i'}{|\boldsymbol{x}_m-\boldsymbol{x}_m'|^3}\,d^3x'$$
+Das elektrische Feld ist der negative Gradient des elektrischen Potentials. Für später wird daher die folgende Nebenrechnung benötigt:
+$$\partial_i\frac{1}{\underbrace{|\boldsymbol{x}_m-\boldsymbol{x}_m'|}_{\text{Abstand}}}=\partial_i\frac{1}{|\boldsymbol{x}|}=\partial_i\frac{1}{\sqrt{\boldsymbol{x}^2}}=\underbrace{-\frac{1}{2}\cdot\frac{1}{{\sqrt{\boldsymbol{x}^{2}}}^3}}_{\text{äußere Ableitung}}\cdot\partial_i\boldsymbol{x}^2=-\frac{1}{\cancel{2}}\cdot\frac{1}{\sqrt{{\boldsymbol{x}^{2}}}^3}\cdot\underbrace{\cancel{2}\cdot\boldsymbol{x}}_{innere Ableitung}\cdot\delta_{im}$$
+$$=-\frac{\boldsymbol{x}_m-\boldsymbol{x}_m'}{|\boldsymbol{x}_m-\boldsymbol{x}_m'|^3}\cdot\delta_{im}=-\frac{\boldsymbol{x}_i-\boldsymbol{x}_i'}{|\boldsymbol{x}_m-\boldsymbol{x}_m'|^3}$$
+Aus der Nebenrechnung lässt sich demnach ablesen:
+$$-\boldsymbol{\nabla}\frac{1}{|\boldsymbol{x}_m-\boldsymbol{x}_m'|}=\frac{\boldsymbol{x}_i-\boldsymbol{x}_i'}{|\boldsymbol{x}_m-\boldsymbol{x}_m'|^3}$$
+Dieser Zusammenhang lässt sich nun in den Coulomb-Ausdruck für das elektrische Feld einsetzen:
+$$E_i(x_m)=\frac{1}{4\pi\cdot\epsilon_0}\cdot\int_V\rho(\boldsymbol{x}_m')\cdot\left(-\boldsymbol{\nabla}\frac{1}{|\boldsymbol{x}_m-\boldsymbol{x}_m'|}\right)\,d^3x'$$
+Dieser Ausdruck kann vereinfacht werden zu:
+$$E_i(x_m)=-\boldsymbol{\nabla}\underbrace{\left(\frac{1}{4\pi\cdot\epsilon_0}\cdot\int_V\frac{\rho(\boldsymbol{x}_m')}{|\boldsymbol{x}_m-\boldsymbol{x}_m'|}\,d^3x'\right)}_{=V(\boldsymbol{x}_m)}$$
+Die Rotation des elektrischen Feldes kann damit wie folgt angeschrieben werden:
+$$\epsilon_{ijk}\cdot\partial_j\cdot E_k=\epsilon_{ijk}\cdot\partial_j\cdot\left(-\partial_kV\right)=-\underset{\vee}{\epsilon_{ijk}}\cdot\underset{\cup}{\partial_j\cdot\partial_k}V=0$$
+$$\vee\rightarrow\text{antisymmetrisch}$$
+$$\cup\rightarrow\text{symmetrisch}$$
+Die Multiplikation einer symmetrischen und einer antisymmetrischen Funktion ergibt jedenfalls $0$.
+Der Nachweis dafür ist wie folgt:
+$$A_{ij}\cdot S_{ij}=-A_{ji}\cdot S_{ji}\underset{umbenennen}{=}-A_{ij}\cdot S_{ij}$$
+$$\implies2\cdot A_{ij}\cdot S_{ij}=0$$
+Dadurch folgt, dass die Multiplikation eines antisymmetrischen Vektors mit einem symmetrischen Vektor $0$ ergibt.
+
+---
+
+## 19. Elektrostatische Maxwell-Gleichungen
+### Erste Maxwell-Gleichung
+$$\boldsymbol{\nabla}\times\boldsymbol{E}=0$$
+### Zweite Maxwell-Gleichung
+$$\boldsymbol{\nabla}\cdot\boldsymbol{E}=\frac{\rho}{\epsilon_0}$$
