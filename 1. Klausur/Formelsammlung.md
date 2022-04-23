@@ -149,7 +149,7 @@ $$\epsilon_{122}=0$$
 
 ---
 
-## 12. 
+## 12. PLATZHALTER
 
 
 ---
@@ -224,3 +224,22 @@ Dadurch folgt, dass die Multiplikation eines antisymmetrischen Vektors mit einem
 $$\boldsymbol{\nabla}\times\boldsymbol{E}=0$$
 ### Zweite Maxwell-Gleichung
 $$\boldsymbol{\nabla}\cdot\boldsymbol{E}=\frac{\rho}{\epsilon_0}$$
+
+---
+
+## 20. Wegunabhängigkeit
+> Für das elektrische Feld $E^{i}\left(x^{m}\right)$ weise man mithilfe des Stoke'schen Satzes, die Gleichheit der Transportintegrale entlang zweier Kurven $x_{1}^{i}(t)$ und $x_{2}^{i}(t)$, welche respektive gleichen Anfangs- und Endpunkt besitzen und eine Fläche $F$ beranden, nach.
+
+![[Wegunabhängigkeit.png]]
+Der Satz von Stokes verknüpft allgemein ein Oberflächenintegral über eine (gekrümmte) Fläche mit einem Kurvenintegral über den Rand der Fläche:
+$$\int_SdA_i\epsilon_{ijk}\partial_jF_k=\oint_{\partial S}ds_iF_i$$
+Angewandt auf das elektrische Feld $E_i(x_m)$ entspricht der Satz von Stokes:
+$$\int_F\boldsymbol{\nabla}\times\boldsymbol{E}\,dF=\oint_{C}E\,ds$$
+Mit der Fläche $F$ aus der Skizze, kann man das Wegintegral über $C$ auf $C_1$ und $C_2$ aufteilen: (Nachdem für eine geschlossene Kurve $C_2$ gegen den Richtungssinn der Kurve $C$ laufen muss, hat das Integral ein negatives Vorzeichen.)
+$$\int_F\underbrace{\boldsymbol{\nabla}\times\boldsymbol{E}}_{=0}\,dF=\oint_{C_1}E\,ds-\oint_{C_2}E\,ds$$
+Wie bereits bei der Wirbelfreiheit des elektrischen Feldes in der Elektrostatik gezeigt, ist die Rotation von $E$ gleich $0$. (Zudem ist dieser Zusammenhang eine Maxwell-Gleichung.) Damit ergibt sich:
+$$0=\oint_{C_1}E\,ds-\oint_{C_2}E\,ds$$
+Vereinfacht zeigt sich somit, dass das elektrische Potential unabhängig von der Kurve $C_n$ (also unabhängig von dem Weg) ist:
+$$-\oint_{C_1}E\,ds=-\oint_{C_2}E\,ds$$
+*Nachsatz*: Das elektrische Feld ist der negative Gradient des elektrischen Potentials. Daher gilt der Zusammenhang:
+$$V(\boldsymbol{x})=-\int_{\Gamma}E\,dl$$
