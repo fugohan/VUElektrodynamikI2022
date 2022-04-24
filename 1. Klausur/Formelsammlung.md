@@ -16,16 +16,18 @@ $$\oint_S\boldsymbol{E}\cdot d\boldsymbol{A}=\frac{1}{\epsilon_0}\cdot\int_V\rho
 
 ## 2. Das elektrische Feld
 ### Allgemeine Zusammenhänge
-$$U=s\cdot E$$$$F=q\cdot E$$$$E=-\nabla V$$
+$$F=q\cdot E$$$$E=-\nabla V$$
 ### Bedingungen für elektrisches Feld in Elektrostatik (= Maxwell-Gleichungen in Elektrostatik)
 $$\nabla\times E=0$$
 $$\nabla\cdot E=\frac{\rho}{\epsilon_0}\implies Gauss'sches\,Gesetz$$
-### Colulomb'scher Ausdruck für $\boldsymbol{E_i(x_m)}$
-$$E_i(x_m)=\frac{1}{4\pi\cdot\epsilon_0}\cdot\int d^3x\cdot\frac{\rho(x_m)\cdot(x_i-x_i')}{{|x_m-x_m'|}^3}$$
+### Coulomb'scher Ausdruck für $\boldsymbol{E_i(x_m)}$
+$$E_i(x_m)=\frac{1}{4\pi\cdot\epsilon_0}\cdot\int d^3x'\cdot\frac{\rho(\boldsymbol{x}_m')\cdot(\boldsymbol{x}_i-\boldsymbol{x}_i')}{{|\boldsymbol{x}_m-\boldsymbol{x}_m'|}^3}$$
 
 ### Dipolmoment
 $$\vec{p}=\sum q_i\cdot\vec{r}_i$$
 ### Energie
+Die Potentielle Energie $U_q$ eines elektrischen Feldes $E$ ist:
+$$U_q(\boldsymbol{x})=q\cdot V(\boldsymbol{x})$$
 Die Selbstenergie $U$ eines elektrischen Feldes $E$ ist:
 $$U=\frac{\epsilon_0}{2}\cdot\int E^2\,d^3x$$
 
@@ -215,7 +217,7 @@ $$\vee\rightarrow\text{antisymmetrisch}$$
 $$\cup\rightarrow\text{symmetrisch}$$
 Die Multiplikation einer symmetrischen und einer antisymmetrischen Funktion ergibt jedenfalls $0$.
 Der Nachweis dafür ist wie folgt:
-$$A_{ij}\cdot S_{ij}=-A_{ji}\cdot S_{ji}\underset{umbenennen}{=}-A_{ij}\cdot S_{ij}$$
+$$A_{ij}\cdot S_{ij}\underset{vertauschen}{=}-A_{ji}\cdot S_{ji}\underset{umbenennen}{=}-A_{ij}\cdot S_{ij}$$
 $$\implies2\cdot A_{ij}\cdot S_{ij}=0$$
 Dadurch folgt, dass die Multiplikation eines antisymmetrischen Vektors mit einem symmetrischen Vektor $0$ ergibt.
 
