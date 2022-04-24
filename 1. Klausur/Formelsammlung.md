@@ -105,6 +105,11 @@ $$\int f'(x)\cdot g(x)\,dx=f(x)\cdot g(x)-\int f(x)\cdot g'(x)$$
 $$\int f(x)\,dx=\int f(\varphi(u))\cdot\varphi'(u)\,du$$
 ### Besondere Regeln
 $$\int\frac{1}{x}\,dx=\ln{(|x|)}+C$$
+$$\int\sin{x}\,dx=-\cos{x}+C$$
+$$\int\sinh{x}\,dx=\cosh{x}+C$$
+$$\int\cos{x}\,dx=\sin{x}+C$$
+$$\int\cosh{x}\,dx=\sinh{x}+C$$
+$$\int\tanh{x}\,dx=\ln{(\cosh{x})}+C$$
 
 ---
 
@@ -132,8 +137,7 @@ $$f(x)=\sqrt{x}\rightarrow f'(x)=\frac{1}{2\cdot\sqrt{x}}$$
 $$f(x)=e^x\rightarrow f'(x)=e^x$$
 $$f(x)=\ln{(x)}\rightarrow f'(x)=\frac{1}{x}$$
 $$f(x)=\sin{x}\rightarrow f'(x)=\cos{x}$$
-$$f(x)=\cos{x}\rightarrow f'(x)=-\sin{x}$$
-$$f(x)=\tan{x}\rightarrow f'(x)=\frac{1}{\cos^2{x}}$$
+$$f(x)=\sinh{x}\rightarrow f'(x)=\cosh{x}$$$$f(x)=\cos{x}\rightarrow f'(x)=-\sin{x}$$$$f(x)=\cosh{x}\rightarrow f'(x)=\sinh{x}$$$$f(x)=\tan{x}\rightarrow f'(x)=\frac{1}{\cos^2{x}}$$$$f(x)=\tanh{x}\rightarrow f'(x)=(1-\tanh^2{x})=\frac{1}{\cosh^2{x}}$$
 
 ---
 
@@ -160,6 +164,10 @@ $$\epsilon_{122}=0$$
 
 ## 13. Allgemeine Rechenregeln
 $$\hat{\boldsymbol{r}}=\vec{e}_r=\frac{\vec{r}}{|r|}$$
+### Trigonometrische Zusammenhänge
+$$\sin^2{x}+\cos^2{x}=1$$
+$$\cosh^2{x}-\sinh^2{x}=1$$
+$$\tan{x}=\frac{\sin{x}}{\cos{x}}$$
 
 ---
 
