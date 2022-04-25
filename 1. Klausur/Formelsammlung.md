@@ -166,6 +166,16 @@ $$\epsilon_{122}=0$$
 $$T_f(x,a)=\sum_{n=0}^{\infty}\frac{f^{(n)}(a)}{n!}\cdot(x-a)^n=f(a)+f'(a)\cdot(x-a)+\frac{f''(a)}{2}\cdot(x-a)^2+\frac{f'''(a)}{6}\cdot(x-a)^3+\dots$$
 ### Multidimensional
 $$f(a_m+y_m)=\sum^{\infty}_{n=0}\frac{1}{n!}\cdot y_m^1\dots y_m^n\cdot\partial_m^1\dots \partial_m^n\cdot\frac{1}{r}$$
+### Wichtige Taylorreihen
+
+$$sin(x)=\sum\limits_{k=0}^{\infty}(-1)^{2k-1}\frac{x^{2k-1}}{(2k-1)!}=x-\frac{x^3}{3!}+...$$
+$$cos(x)=\sum\limits_{k=0}^{\infty}(-1)^{2k}\frac{x^{2k}}{(2k)!}=1-\frac{x^2}{2!}+\frac{x^4}{4!}-...$$
+$$e^x=\sum\limits_{k=0}^\infty \frac{x^k}{k!}=1+x+\frac{x^2}{2!}+...$$
+$$\ln{x}=\sum\limits_{n=1}^\infty\frac{(-1)^{k+1}}{k}(x-1)^k=(x-1)-\frac{(x-1)^2}{2}+\frac{(x-1)^3}{3}-...$$
+$$\sqrt{1+x}=1+\frac{x}{2}+...$$
+$$\frac{1}{\sqrt{1+x}}=1-\frac{x}{2}+...$$
+$$\frac{1}{1-x}=1+x+x^2+...$$
+
 
 ---
 
