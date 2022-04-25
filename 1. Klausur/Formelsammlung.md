@@ -22,6 +22,10 @@ $$\nabla\times E=0$$
 $$\nabla\cdot E=\frac{\rho}{\epsilon_0}\implies Gauss'sches\,Gesetz$$
 ### Coulomb'scher Ausdruck für $\boldsymbol{E_i(x_m)}$
 $$E_i(x_m)=\frac{1}{4\pi\cdot\epsilon_0}\cdot\int d^3x'\cdot\frac{\rho(\boldsymbol{x}_m')\cdot(\boldsymbol{x}_i-\boldsymbol{x}_i')}{{|\boldsymbol{x}_m-\boldsymbol{x}_m'|}^3}$$
+*$x'$ entspricht dem Quellpunkt. $x$ entspricht dem Referenzpunkt.*
+
+**Merksatz**: Wann verwendet man den Coulomb-Ansatz und wann das Gauß’sche Gesetz? Wenn ein Volumen existiert, auf dessen Oberfläche das elektrische Feld konstant ist -> Gauß’sches Gesetz.
+Ansonsten -> Coulomb'scher Ausdruck.
 
 ### Dipolmoment
 $$\vec{p}=\sum q_i\cdot\vec{r}_i$$
@@ -157,8 +161,11 @@ $$\epsilon_{122}=0$$
 
 ---
 
-## 12. PLATZHALTER
-
+## 12. Taylorreihe
+### Eindimensional
+$$T_f(x,a)=\sum_{n=0}^{\infty}\frac{f^{(n)}(a)}{n!}\cdot(x-a)^n=f(a)+f'(a)\cdot(x-a)+\frac{f''(a)}{2}\cdot(x-a)^2+\frac{f'''(a)}{6}\cdot(x-a)^3+\dots$$
+### Multidimensional
+$$f(a_m+y_m)=\sum^{\infty}_{n=0}\frac{1}{n!}\cdot y_m^1\dots y_m^n\cdot\partial_m^1\dots \partial_m^n\cdot\frac{1}{r}$$
 
 ---
 
@@ -265,3 +272,7 @@ Es gibt für ein Gradientenfeld mehrere äquivalente Definitionen:
 3. Kurvenintegrale über eine beliebige geschlossene Randkurve $S$ ergeben immer Null: $\oint_S\boldsymbol{F}\,dr=0$.
 
 Das elektrische Feld $E$ ist ein Gradientenfeld.
+
+## TODO!!!
+- Taylor-Entwicklung
+- Merksatz von Dennis
