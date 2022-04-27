@@ -314,3 +314,21 @@ $\partial L$ (der Rand eines Leiters) ist eine Äquipotentialfläche
 $$\rho(x_m)\Biggl\vert_{L_0}=0\text{ , da }\partial_iE_i(x_m)=\frac{\rho(x_m)}{\epsilon_0}$$
 ### Der Fluss ist senkrecht zu der Oberfläche
 $$E_i\cdot n_i\Biggl\vert_{\partial L}=\frac{\sigma}{\epsilon_0}\text{ , mit $n_i$ = Flächennormale von $\partial L$}$$
+# 24 Herleitung Energie (noch falsch)
+Ausgangspunkt potenzielle Energie: 
+$$U_q = q V(x_m)$$
+für ein System von N Punktladungen gilt: 
+$$U=\frac{1}{2} \sum\limits_{ij=1}^N \frac{1}{4\pi\varepsilon_0}\frac{q_iq_j}{|x^m_i-x^m_j|}$$
+$$q_i=\rho(x_m){d^3 x}$$
+$$q_j=\rho(x_m'){d^3 x'}$$
+$$U=\frac{1}{2}\int d^3x d^3x' \frac{1}{4\pi\varepsilon_0}\frac{\rho(x_m)\rho{x_m'}}{{|x_m-x_m|}}$$
+Alle $x_m'$-Terme werden zu einem $V(x_m)$ zusammengefasst.
+$$=\frac{1}{2}\int d^3x\rho(x_m)\cdot{V(x_m)}$$
+  1.MG anwenden $\partial_i E_i=\frac{\rho(x_m)}{\varepsilon_0} \rightarrow \rho(x_m)=\partial_i E_i \varepsilon_0$ : 
+
+$$\Rightarrow \frac{\varepsilon_0}{2}\int\partial_i E_i(x_m)V(x_m)d^3x =$$
+Mit umgekehrte Produktregel folgt: %%Danke Han für die Erklärung%% 
+$$=\frac{\varepsilon_0}{2} \int \partial_i(E_i (x_m)
+V(x_m))-E_i(x_m) \partial_i V(x_m) d^3x$$
+Mittels $E_i = -\partial_i V$ Zusammenhang folgt:
+$$U=\frac{\varepsilon_0}{2}\int d^3x E^2(x_m)$$
