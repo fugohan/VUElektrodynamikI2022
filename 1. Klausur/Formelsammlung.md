@@ -299,3 +299,18 @@ $$=-\frac{3}{2}\cdot\frac{2\cdot\delta_{il}\cdot r_l}{r^5}$$
 Damit ergibt sich das elektrische Feld zu:
 $$E_i=-\frac{p_j}{4\pi\cdot\epsilon_0}\cdot\left(\frac{\delta_{ij}}{r^3}-3\cdot r_j\cdot\frac{r_i}{r^5}\right)$$
 $$=\frac{1}{4\pi\cdot\epsilon_0}\cdot\left(3\cdot\frac{p_j\cdot r_j}{r^5}\cdot r_i-\frac{1}{r^3}\cdot p_i\right)$$
+
+---
+
+## 23. Bedingungen für Leiter
+### Feldfreiheit innerhalb eines Leiters
+$$E_i\Biggl\vert_{L_0}=0$$
+### Radiale Ausbreitung des elektrischen Feldes
+$$E_i\bot\partial L$$
+### Äquipotentialfläche
+$\partial L$ (der Rand eines Leiters) ist eine Äquipotentialfläche
+
+### Ladungsverteilungs-freiheit innerhalb eines Leiters
+$$\rho(x_m)\Biggl\vert_{L_0}=0\text{ , da }\partial_iE_i(x_m)=\frac{\rho(x_m)}{\epsilon_0}$$
+### Der Fluss ist senkrecht zu der Oberfläche
+$$E_i\cdot n_i\Biggl\vert_{\partial L}=\frac{\sigma}{\epsilon_0}\text{ , mit $n_i$ = Flächennormale von $\partial L$}$$
