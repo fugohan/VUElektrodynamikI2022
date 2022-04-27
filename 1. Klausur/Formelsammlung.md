@@ -32,6 +32,8 @@ $$\vec{p}=\sum q_i\cdot\vec{r}_i$$
 ### Energie
 Die Potentielle Energie $U_q$ eines elektrischen Feldes $E$ ist:
 $$U_q(\boldsymbol{x})=q\cdot V(\boldsymbol{x})$$
+Die Abstoßungsenergie $E_{ee}$ eines elektrischen Feldes ist: ($U$ entspricht der elektrischen Spannung)
+$$E_{ee}=q\cdot U=q\cdot\int_{\Gamma}E\,ds$$
 Die Selbstenergie $U$ eines elektrischen Feldes $E$ ist:
 $$U=\frac{\epsilon_0}{2}\cdot\int E^2\,d^3x$$
 
@@ -72,9 +74,9 @@ $$\vec{r}(s,t)=\left[{\begin{array}{cc} s\cdot\cos{t} \\ s\cdot\sin{t} \\ \end{a
 
 ## 7. Zylinderkoordinaten
 ![[Zylinderkoordinaten.png]]
-$$\vec{r}(R,\varphi)=\left[{\begin{array}{cc} R\cdot\cos{\varphi} \\ R\cdot\sin{\varphi} \\ \end{array} }\right]$$
+$$\vec{r}(R,\varphi,z)=\left[{\begin{array}{cc} R\cdot\cos{\varphi} \\ R\cdot\sin{\varphi} \\ z \\\end{array} }\right]$$
 Bzw. mit einer anderen Parametrisierung:
-$$\vec{r}(s,t)=\left[{\begin{array}{cc} s\cdot\cos{t} \\ s\cdot\sin{t} \\ \end{array} }\right]$$
+$$\vec{r}(s,t,z)=\left[{\begin{array}{cc} s\cdot\cos{t} \\ s\cdot\sin{t} \\ z \\\end{array} }\right]$$
 In Zylinderkoordinaten gilt:
 $$dV=r\,dr\,d\varphi\,dz$$
 ### Zylindersymmetrie
@@ -283,6 +285,17 @@ Es gibt für ein Gradientenfeld mehrere äquivalente Definitionen:
 
 Das elektrische Feld $E$ ist ein Gradientenfeld.
 
-## TODO!!!
-- Taylor-Entwicklung
-- Merksatz von Dennis
+---
+
+## 22. Herleitung des elektrischen Feldes eines Punktdipols
+Das Potential eines Punktdipols im Ursprung ist:
+$$V=\frac{1}{4\pi\cdot\epsilon_0}\cdot\frac{p_i\cdot r_i}{r^3}$$
+Allgemein ist das elektrische Feld:
+$$E=-\nabla V$$
+Mit den folgenden Nebenrechnungen kann daraus das elektrische Feld ermittelt werden:
+$$\partial_i\left(\frac{r_j}{r^3}\right)=\frac{\delta_{ij}}{r^3}+r_j\cdot\partial_j\left(\frac{1}{r^3}\right)$$
+$$\partial_j\left(\frac{1}{(r^2)^{\frac{3}{2}}}\right)=\partial_j\left(\frac{1}{(r_k\cdot r_k)^{\frac{3}{2}}}\right)=-\frac{3}{2}\cdot\frac{\partial_i(r_l\cdot r_l)}{(r_k\cdot r_k)^{\frac{5}{2}}}$$
+$$=-\frac{3}{2}\cdot\frac{2\cdot\delta_{il}\cdot r_l}{r^5}$$
+Damit ergibt sich das elektrische Feld zu:
+$$E_i=-\frac{p_j}{4\pi\cdot\epsilon_0}\cdot\left(\frac{\delta_{ij}}{r^3}-3\cdot r_j\cdot\frac{r_i}{r^5}\right)$$
+$$=\frac{1}{4\pi\cdot\epsilon_0}\cdot\left(3\cdot\frac{p_j\cdot r_j}{r^5}\cdot r_i-\frac{1}{r^3}\cdot p_i\right)$$
