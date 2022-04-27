@@ -16,7 +16,8 @@ $$\oint_S\boldsymbol{E}\cdot d\boldsymbol{A}=\frac{1}{\epsilon_0}\cdot\int_V\rho
 
 ## 2. Das elektrische Feld
 ### Allgemeine Zusammenhänge
-$$F=q\cdot E$$$$E=-\nabla V$$
+$$F=q\cdot E$$$$E=-\nabla V$$$$\boldsymbol{M}=\boldsymbol{r}\times(q\cdot\boldsymbol{E})$$($\boldsymbol{r}$ entspricht dem Hebelarm)
+
 ### Bedingungen für elektrisches Feld in Elektrostatik (= Maxwell-Gleichungen in Elektrostatik)
 $$\nabla\times E=0$$
 $$\nabla\cdot E=\frac{\rho}{\epsilon_0}\implies Gauss'sches\,Gesetz$$
@@ -317,7 +318,7 @@ $$E_i\cdot n_i\Biggl\vert_{\partial L}=\frac{\sigma}{\epsilon_0}\text{ , mit $n_
 # 24 Herleitung Energie (noch falsch)
 Ausgangspunkt potenzielle Energie: 
 $$U_q = q V(x_m)$$
-für ein System von N Punktladungen gilt: 
+für ein System von $N$ Punktladungen gilt:
 $$U=\frac{1}{2} \sum\limits_{ij=1}^N \frac{1}{4\pi\varepsilon_0}\frac{q_iq_j}{|x^m_i-x^m_j|}$$
 $$q_i=\rho(x_m){d^3 x}$$
 $$q_j=\rho(x_m'){d^3 x'}$$
