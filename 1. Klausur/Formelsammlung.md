@@ -17,7 +17,6 @@ $$\oint_S\boldsymbol{E}\cdot d\boldsymbol{A}=\frac{1}{\epsilon_0}\cdot\int_V\rho
 ## 2. Das elektrische Feld
 ### Allgemeine Zusammenhänge
 $$F=q\cdot E$$$$E=-\nabla V$$$$\boldsymbol{M}=\boldsymbol{r}\times(q\cdot\boldsymbol{E})$$($\boldsymbol{r}$ entspricht dem Hebelarm)
-
 ### Bedingungen für elektrisches Feld in Elektrostatik (= Maxwell-Gleichungen in Elektrostatik)
 $$\nabla\times E=0$$
 $$\nabla\cdot E=\frac{\rho}{\epsilon_0}\implies Gauss'sches\,Gesetz$$
@@ -288,7 +287,7 @@ Das elektrische Feld $E$ ist ein Gradientenfeld.
 
 ---
 
-## 22. Herleitung des elektrischen Feldes eines Punktdipols
+## 22. Herleitung des elektrischen Feldes eines Punktdipols 
 Das Potential eines Punktdipols im Ursprung ist:
 $$V=\frac{1}{4\pi\cdot\epsilon_0}\cdot\frac{p_i\cdot r_i}{r^3}$$
 Allgemein ist das elektrische Feld:
@@ -301,24 +300,27 @@ Damit ergibt sich das elektrische Feld zu:
 $$E_i=-\frac{p_j}{4\pi\cdot\epsilon_0}\cdot\left(\frac{\delta_{ij}}{r^3}-3\cdot r_j\cdot\frac{r_i}{r^5}\right)$$
 $$=\frac{1}{4\pi\cdot\epsilon_0}\cdot\left(3\cdot\frac{p_j\cdot r_j}{r^5}\cdot r_i-\frac{1}{r^3}\cdot p_i\right)$$
 
+
+
 ---
 
-## 23. Bedingungen für Leiter
+## 23. Bedingungen für Leiter 
 ### Feldfreiheit innerhalb eines Leiters
 $$E_i\Biggl\vert_{L_0}=0$$
 ### Radiale Ausbreitung des elektrischen Feldes
 $$E_i\bot\partial L$$
 ### Äquipotentialfläche
 $\partial L$ (der Rand eines Leiters) ist eine Äquipotentialfläche
-
 ### Ladungsverteilungs-freiheit innerhalb eines Leiters
 $$\rho(x_m)\Biggl\vert_{L_0}=0\text{ , da }\partial_iE_i(x_m)=\frac{\rho(x_m)}{\epsilon_0}$$
 ### Der Fluss ist senkrecht zu der Oberfläche
 $$E_i\cdot n_i\Biggl\vert_{\partial L}=\frac{\sigma}{\epsilon_0}\text{ , mit $n_i$ = Flächennormale von $\partial L$}$$
-# 24 Herleitung Energie (noch falsch)
+
+---
+# 24 Herleitung Energie 
 Ausgangspunkt potenzielle Energie: 
 $$U_q = q V(x_m)$$
-für ein System von $N$ Punktladungen gilt:
+für ein System von N Punktladungen gilt: 
 $$U=\frac{1}{2} \sum\limits_{ij=1}^N \frac{1}{4\pi\varepsilon_0}\frac{q_iq_j}{|x^m_i-x^m_j|}$$
 $$q_i=\rho(x_m){d^3 x}$$
 $$q_j=\rho(x_m'){d^3 x'}$$
@@ -329,7 +331,19 @@ $$=\frac{1}{2}\int d^3x\rho(x_m)\cdot{V(x_m)}$$
 
 $$\Rightarrow \frac{\varepsilon_0}{2}\int\partial_i E_i(x_m)V(x_m)d^3x =$$
 Mit umgekehrte Produktregel folgt: %%Danke Han für die Erklärung%% 
-$$=\frac{\varepsilon_0}{2} \int \partial_i(E_i (x_m)
-V(x_m))-E_i(x_m) \partial_i V(x_m) d^3x$$
+$$=\frac{\varepsilon_0}{2} \int \underbrace{ \partial_i(E_i (x_m)
+V(x_m))}_{=0,\, \text{durch Vektoridentitäten}}-E_i(x_m) \partial_i V(x_m) d^3x$$
 Mittels $E_i = -\partial_i V$ Zusammenhang folgt:
 $$U=\frac{\varepsilon_0}{2}\int d^3x E^2(x_m)$$
+
+---
+
+# 25 Multipolmoment Formeln 
+### Die gesamte Entwicklung
+$$V(r)=\frac{1}{4\pi\varepsilon_0}\left(\frac{Q}{r}+Q_i\frac{r_i}{r^3}+P_{ij}\frac{3\cdot r_ir_j-r^2\delta_{ij}}{2\cdot r^5} +\mathcal{O}(r^{-4})\right)$$
+### Einzel Momente mittels $\rho$ berechnen:
+$$Q=\int \rho(x_m) d^3 x$$
+$$Q_i=\int \rho(x_m)\cdot x_i d^3 x$$
+$$P_{ij}=\int \rho(x_m)\cdot x_i x_j d^3 x$$
+
+--- 
