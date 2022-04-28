@@ -324,7 +324,7 @@ für ein System von N Punktladungen gilt:
 $$U=\frac{1}{2} \sum\limits_{ij=1}^N \frac{1}{4\pi\varepsilon_0}\frac{q_iq_j}{|x^m_i-x^m_j|}$$
 $$q_i=\rho(x_m){d^3 x}$$
 $$q_j=\rho(x_m'){d^3 x'}$$
-$$U=\frac{1}{2}\int d^3x d^3x' \frac{1}{4\pi\varepsilon_0}\frac{\rho(x_m)\rho{x_m'}}{{|x_m-x_m|}}$$
+$$U=\frac{1}{2}\int d^3x d^3x' \frac{1}{4\pi\varepsilon_0}\frac{\rho(x_m)\cdot\rho(x_m')}{{|x_m-x_m'|}}$$
 Alle $x_m'$-Terme werden zu einem $V(x_m)$ zusammengefasst.
 $$=\frac{1}{2}\int d^3x\rho(x_m)\cdot{V(x_m)}$$
   1.MG anwenden $\partial_i E_i=\frac{\rho(x_m)}{\varepsilon_0} \rightarrow \rho(x_m)=\partial_i E_i \varepsilon_0$ : 
@@ -344,6 +344,6 @@ $$V(r)=\frac{1}{4\pi\varepsilon_0}\left(\frac{Q}{r}+Q_i\frac{r_i}{r^3}+P_{ij}\fr
 ### Einzel Momente mittels $\rho$ berechnen:
 $$Q=\int \rho(x_m) d^3 x$$
 $$Q_i=\int \rho(x_m)\cdot x_i d^3 x$$
-$$P_{ij}=\int \rho(x_m)\cdot x_i x_j d^3 x$$
+$$P_{ij}=\frac{1}{2}\cdot\int \rho(x_m)\cdot x_i x_j d^3 x$$
 
 --- 
