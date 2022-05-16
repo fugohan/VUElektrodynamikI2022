@@ -11,7 +11,7 @@ jobs:
           pandoc-version: 2.18
       - uses: actions/checkout@v2
       - name: install texlive xelatex
-        run: "sudo apt-get install texlive-xelatex -y "
+        run: "sudo apt-get install texlive-xetex -y "
      # - name: install texlive 2 
      #   run: "sudo apt-get install texlive-fonts-recommended -y" 
       - name: create file list
