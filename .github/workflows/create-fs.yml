@@ -9,8 +9,10 @@ jobs:
       - uses: actions/checkout@v2
       - name: show dir 
         run: |
-          ls
           cd pandoc
+          ls
+          echo "--------------------------"
+          pandoc --help
       - uses: docker://pandoc/core:2.9
         with:
           args:  >-  # allows you to break string into multiple lines
