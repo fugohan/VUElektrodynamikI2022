@@ -1,35 +1,13 @@
 name: Advanced Usage
 
-on: push
+on: 
+  push:
+    paths:
+      - 'pandoc/test.md'
 
 jobs:
-  check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with: 
-          fetch-depth: 2
-                    
-      - name: check modified files 
-        id: check_files
-        run: |
-          git diff --name-only HEAD^ HEAD
-          git diff --name-only HEAD^ HEAD > files.txt
-          while IFS= read -r file
-          do
-            echo $file
-            if [[ $file != pandoc/* ]]; then
-              echo "no modified file"
-              echo "::set-output name=run_job::true"
-              break
-            else
-              echo "::set-output name=run_job::true"
-            fi
-          done < files.txt
   create_pdf: 
     name: create pdf 
-    needs: check 
-    if: needs.check.outputs.run_job == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: nikeee/setup-pandoc@v1
