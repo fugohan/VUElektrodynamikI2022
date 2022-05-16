@@ -1,4 +1,7 @@
-
+---
+header-includes:
+- \usepackage{cancel}
+---
 
 test ist toll 
 
@@ -14,3 +17,5 @@ $$TEST = 2$$
 ## NEED
 
 it on the window!!!
+
+$$\cancel{2} +3 = 3$$ %%dies ist ein test%%
