@@ -18,9 +18,9 @@ jobs:
           echo "::set-output name=files::$(printf '"%s" ' *.md)"
           cd pandoc
           ls 
-      - uses: docker://pandoc/latex:2.9
+      - uses: docker://pandoc/latex:2.18
         with:
-          args: --output=output/result.pdf ${{ steps.files_list.outputs.files }}
+          args: --output=output/result.pdf test.md
           
       - uses: actions/upload-artifact@master
         with:
