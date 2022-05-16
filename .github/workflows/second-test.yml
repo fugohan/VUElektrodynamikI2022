@@ -10,12 +10,13 @@ jobs:
         with:
           pandoc-version: 2.18
       - uses: actions/checkout@v2
-
+      - name: install texlive
+        run: "sudo apt-get install texlive-latex-base -y "
+      - name: install texlive 2 
+        run: "sudo apt-get install texlive-fonts-recommended -y" 
       - name: create file list
         id: files_list
         run: |
-          sudo apt-get install texlive-latex-base -y 
-          sudo apt-get install texlive-fonts-recommended -y 
           #echo "Lorem ipsum" > lorem_1.md  # create two example files
           #echo "dolor sit amet" > lorem_2.md
           mkdir output  # create output dir
