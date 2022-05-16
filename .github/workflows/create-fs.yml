@@ -6,13 +6,17 @@ jobs:
   convert_via_pandoc:
     runs-on: ubuntu-18.04
     steps:
+      - name: show dir 
+        run: |
+          ls
+          cd pandoc
       - uses: docker://pandoc/core:2.9
         with:
           args:  >-  # allows you to break string into multiple lines
             --standalone
-            --output=pandoc/test.pdf
+            --output=test.pdf
             --pdf-engine=xelatex
-            pandoc/test.md
+            test.md
       - name: Show dir 
         run: |
           ls 
