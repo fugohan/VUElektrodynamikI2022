@@ -20,7 +20,7 @@ jobs:
           # this will also include README.md
           echo "::set-output name=files::$(printf '"%s" ' *.md)"
           cd pandoc
-          pandoc -o test.pdf test.md --pdf-engine=xelatex
+          pandoc -o test.pdf test.md 
             
           
       - uses: actions/upload-artifact@master
