@@ -20,7 +20,7 @@ jobs:
           ls 
       - uses: docker://pandoc/latex:2.18
         with:
-          args: --output=output/result.pdf test.md
+          args: --output=output/result.pdf ${GITHUB_WORKSPACE}/pandoc/test.md
           
       - uses: actions/upload-artifact@master
         with:
