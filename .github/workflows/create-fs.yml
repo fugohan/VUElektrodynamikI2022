@@ -8,4 +8,12 @@ jobs:
     steps:
       - uses: docker://pandoc/core:2.9
         with:
-          args: "--help" # gets appended to pandoc command
+          args:  >-  # allows you to break string into multiple lines
+            --standalone
+            --output=pandoc/test.pdf
+            --pdf-engine=xelatex
+            pandoc/test.md
+      - name: Show dir 
+        run: |
+          ls 
+          
