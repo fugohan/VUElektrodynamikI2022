@@ -6,6 +6,11 @@ jobs:
   convert_via_pandoc:
     runs-on: ubuntu-latest
     steps:
+      - name: setup git config
+        run: |
+          # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
       - uses: nikeee/setup-pandoc@v1
         with:
           pandoc-version: 2.18
@@ -17,24 +22,10 @@ jobs:
       - name: create file list
         id: files_list
         run: |
-          #echo "Lorem ipsum" > lorem_1.md  # create two example files
-          #echo "dolor sit amet" > lorem_2.md
-          mkdir output  # create output dir
-          # this will also include README.md
-          echo "::set-output name=files::$(printf '"%s" ' *.md)"
           cd pandoc
           pandoc -o test.pdf test.md --pdf-engine=xelatex
-            
-          
-      - name: setup git config
-        run: |
-          # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
-          git config user.name "GitHub Actions Bot"
-          git config user.email "<>"
-
-      - name: commit
-        run: |
-          # Stage the file, commit and push
           git add test.pdf
           git commit -m "new pdf created"
           git push origin workflow
+          
+
