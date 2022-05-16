@@ -10,10 +10,10 @@ jobs:
         with:
           pandoc-version: 2.18
       - uses: actions/checkout@v2
-      - name: install texlive
-        run: "sudo apt-get install texlive-latex-base -y "
-      - name: install texlive 2 
-        run: "sudo apt-get install texlive-fonts-recommended -y" 
+      - name: install texlive full
+        run: "sudo apt-get install texlive-full -y "
+     # - name: install texlive 2 
+     #   run: "sudo apt-get install texlive-fonts-recommended -y" 
       - name: create file list
         id: files_list
         run: |
