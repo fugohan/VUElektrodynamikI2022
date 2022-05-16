@@ -3,19 +3,46 @@ name: Advanced Usage
 on: push
 
 jobs:
-  convert_via_pandoc:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with: 
+          fetch-depth: 2
+                    
+      - name: check modified files 
+        id: check_files
+        run: |
+          git diff --name-only HEAD^ HEAD
+          git diff --name-only HEAD^ HEAD > files.txt
+          while IFS= read -r file
+          do
+            echo $file
+            if [[ $file != pandoc/* ]]; then
+              echo "no modified file"
+              break
+            else
+              echo "::set-output name=run_job::true"
+            fi
+          done < files.txt
+  create_pdf: 
+    name: create pdf 
+    needs: check 
+    if: needs.check.outputs.run_job == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: nikeee/setup-pandoc@v1
         with:
           pandoc-version: 2.18
       - uses: actions/checkout@v2
+                  
       - name: setup git config
         run: |
           # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
       - name: install texlive xelatex
+      
         run: "sudo apt-get install texlive-xetex -y "
      # - name: install texlive 2 
      #   run: "sudo apt-get install texlive-fonts-recommended -y" 
