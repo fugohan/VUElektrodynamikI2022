@@ -20,7 +20,7 @@ jobs:
             echo $file
             if [[ $file != pandoc/* ]]; then
               echo "no modified file"
-              echo "::set-output name=run_job::false"
+              echo "::set-output name=run_job::true"
               break
             else
               echo "::set-output name=run_job::true"
