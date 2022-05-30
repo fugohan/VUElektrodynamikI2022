@@ -1,4 +1,4 @@
-# 2. Klausur test
+# 2. Klausur
 ## Altfragen
 ### 2019
 1. Zeigen Sie die Quellfreiheit des Magnetfelds $B^{i}\left(x^{m}\right)$ unter Verwendung des Amperéschen Ausdrucks, welcher $B^{i}\left(x^{m}\right)$ in Abhängigkeit von der Volumsstromdichte $J^{i}\left(x^{m}\right)$ darstellt.
