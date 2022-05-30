@@ -45,3 +45,6 @@ $$\begin{aligned}B^i(x^m) &= \frac{\mu_0}{4\pi} \int d^3 x' \frac{\varepsilon_{i
 
 $$\begin{aligned}E^i(x^m)&=\frac{1}{4\pi\varepsilon_0}\int d^3x' \frac{\rho(x'^m)(x^i-x'^i)}{\lvert x^m-x'^m\rvert^3} =\\&= - \partial_i \underbrace{\left(\frac{1}{4\pi\varepsilon_0} \int d^3 x' \frac{\rho(x'^m)}{\lvert x^m -x'^m\rvert}\right)}_{ := V(x^m)}=\\&=-\partial_i V(x^m)\\\Rightarrow \varepsilon_{ijk}\,\partial_j E^k&(x^m)=\underset{\vee}{\varepsilon_{ijk}} \underset{\cup}{\partial_i \partial_j}V(x^m)=0
 \end{aligned}$$
+
+
+Stand 30.Mai.2022
